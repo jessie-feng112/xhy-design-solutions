@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About XHY Design Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+    <div class="logo">
+        <img src="images/xhy-logo.jpg" alt="XHY Design Solutions">
+        <span>XHY DESIGN SOLUTIONS</span>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav id="main-nav">
+        <a href="index.html#services">Services</a>
+        <a href="about.html">About</a>
+        <a href="index.html#portfolio">Our Work</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+    <main>
+
+    <section class="about-intro">
+        <h1>About XHY</h1>
+
+        <p>
+            XHY Design Solutions provides professional design support
+            for cabinet manufacturers, furniture brands, interior design
+            firms, and showroom operators.
+        </p>
+
+        <p>
+            We help businesses expand their design capacity without the
+            cost of building a larger in-house design team.
+        </p>
+    </section>
+
+    <section class="about-services">
+        <h2>What We Do</h2>
+
+        <p>
+            Our services cover cabinetry design, interior visualization,
+            CAD drafting, technical drawings, space planning, and
+            showroom design.
+        </p>
+
+        <ul>
+            <li>Custom Cabinet Design</li>
+            <li>Interior Visualization & 3D Rendering</li>
+            <li>CAD Drafting & Technical Drawings</li>
+            <li>Space Planning & Interior Design</li>
+            <li>Showroom & Exhibition Design</li>
+        </ul>
+    </section>
+
+    <section class="about-expertise">
+        <h2>Practical Design. Reliable Support.</h2>
+
+        <p>
+            Our strength lies in our understanding of cabinetry
+            construction, manufacturing processes, and production
+            requirements.
+        </p>
+
+        <p>
+            We don't simply create attractive visuals. We develop
+            practical and buildable design solutions that work with
+            real-world production requirements.
+        </p>
+
+        <p>
+            By combining specialized design expertise, flexible project
+            support, and efficient turnaround, we help our partners
+            handle more projects, improve workflow efficiency, and
+            deliver with confidence.
+        </p>
+    </section>
+
+</main>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("main-nav");
+        nav.classList.toggle("active");
+    }
+
+    const navLinks = document.querySelectorAll("#main-nav a");
+
+    navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            const nav = document.getElementById("main-nav");
+            nav.classList.remove("active");
+        });
+    });
+</script>
+</body>
+</html>
