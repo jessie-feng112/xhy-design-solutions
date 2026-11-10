@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>French Vintage Residence | XHY Design Solutions</title>
+
+    <link rel="stylesheet" href="style.css">
+
+<style>
+
+    /* Lightbox */
+
+    .lightbox {
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0, 0, 0, 0.88);
+
+        display: none;
+
+        align-items: center;
+
+        justify-content: center;
+
+        z-index: 9999;
+
+        padding: 40px;
+
+        box-sizing: border-box;
+
+    }
+
+    .lightbox.active {
+
+        display: flex;
+
+    }
+
+    .lightbox-content {
+
+        max-width: 92vw;
+
+        max-height: 90vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+    .lightbox-content img {
+
+        display: block;
+
+        max-width: 100%;
+
+        max-height: 90vh;
+
+        width: auto;
+
+        height: auto;
+
+        object-fit: contain;
+
+    }
+
+    .lightbox-close,
+
+    .lightbox-prev,
+
+    .lightbox-next {
+
+        position: absolute;
+
+        border: none;
+
+        background: transparent;
+
+        color: #ffffff;
+
+        cursor: pointer;
+
+        font-family: Arial, sans-serif;
+
+        line-height: 1;
+
+        padding: 10px;
+
+        z-index: 10000;
+
+    }
+
+    .lightbox-close {
+
+        top: 20px;
+
+        right: 25px;
+
+        font-size: 40px;
+
+        font-weight: 300;
+
+    }
+
+    .lightbox-prev,
+
+    .lightbox-next {
+
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        font-size: 52px;
+
+        font-weight: 300;
+
+    }
+
+    .lightbox-prev {
+
+        left: 20px;
+
+    }
+
+    .lightbox-next {
+
+        right: 20px;
+
+    }
+
+    .lightbox-close:hover,
+
+    .lightbox-prev:hover,
+
+    .lightbox-next:hover {
+
+        opacity: 0.65;
+
+    }
+
+    body.lightbox-open {
+
+        overflow: hidden;
+
+    }
+
+    /* Gallery images are clickable */
+
+    .gallery-item {
+
+        cursor: pointer;
+
+    }
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+
+        .lightbox {
+
+            padding: 20px;
+
+        }
+
+        .lightbox-content {
+
+            max-width: 94vw;
+
+            max-height: 84vh;
+
+        }
+
+        .lightbox-content img {
+
+            max-height: 84vh;
+
+        }
+
+        .lightbox-close {
+
+            top: 12px;
+
+            right: 12px;
+
+            font-size: 34px;
+
+        }
+
+        .lightbox-prev,
+
+        .lightbox-next {
+
+            font-size: 42px;
+
+        }
+
+        .lightbox-prev {
+
+            left: 5px;
+
+        }
+
+        .lightbox-next {
+
+            right: 5px;
+
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="images/xhy-logo.jpg" alt="XHY Design Solutions">
+
+            <span>XHY DESIGN SOLUTIONS</span>
+
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <nav id="main-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#services">Services</a>
+
+            <a href="about.html">About</a>
+
+            <a href="index.html#portfolio">Our Work</a>
+
+            <a href="index.html#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Project Hero -->
+
+    <section class="project-hero">
+
+        <div class="project-hero-text">
+
+            <p class="project-number">PROJECT 05</p>
+
+            <h1>French Vintage Residence</h1>
+
+            <p class="project-category">
+
+                Residential Interior Design
+
+            </p>
+
+        </div>
+
+        <div class="project-hero-image">
+
+            <img
+
+                src="images/french-vintage-residence-living-room.png"
+
+                alt="French Vintage Residence living room">
+
+        </div>
+
+    </section>
+
+    <!-- Project Overview -->
+
+    <section class="project-overview">
+
+        <div class="project-overview-text">
+
+            <p class="section-label">PROJECT OVERVIEW</p>
+
+            <h2>Vintage Character, Thoughtfully Reimagined</h2>
+
+            <p>
+                This French vintage-inspired residence combines warm wood finishes, soft neutral tones,
+                distinctive arched details, and carefully integrated cabinetry to create a welcoming home.
+            </p>
+
+            <p>
+                The open-plan living, dining, and kitchen area encourages shared everyday living, while
+                tailored bedroom storage and dedicated private spaces support comfort and functionality.
+            </p>
+
+        </div>
+
+        <div class="project-information">
+
+            <p class="section-label">PROJECT INFORMATION</p>
+
+            <div class="project-info-item">
+
+                <span>Project Type</span>
+
+                <strong>Residential Interior Design</strong>
+
+            </div>
+
+            <div class="project-info-item">
+
+                <span>Design Style</span>
+
+                <strong>French Vintage</strong>
+
+            </div>
+
+            <div class="project-info-item">
+
+    <span>Floor Area</span>
+
+    <strong>225 m²</strong>
+
+</div>
+
+            <div class="project-info-item">
+
+                <span>Services</span>
+
+                <strong>3D Visualization · Rendering · CAD Support</strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Floor Plan -->
+
+    <section class="project-floor-plan">
+
+        <div class="project-section-heading">
+
+            <p class="section-label">SPACE PLANNING</p>
+
+            <h2>Floor Plan</h2>
+
+        </div>
+
+        <div class="floor-plan-image">
+
+            <img
+
+                src="images/french-vintage-residence-floor-plan.png"
+
+                alt="French Vintage Residence floor plan">
+
+        </div>
+
+    </section>
+
+    <!-- Project Gallery -->
+
+    <section class="project-gallery">
+
+        <div class="project-section-heading">
+
+            <p class="section-label">PROJECT GALLERY</p>
+
+            <h2>Interior Details</h2>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-entryway.png"
+                     alt="French Vintage Residence entryway">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-living-room.png"
+                     alt="French Vintage Residence living room">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-living-dining-area.png"
+                     alt="French Vintage Residence living and dining area">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-kitchen.png"
+                     alt="French Vintage Residence kitchen">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-bedroom-01.png"
+                     alt="French Vintage Residence bedroom 1">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-bedroom-02.png"
+                     alt="French Vintage Residence bedroom 2">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-bedroom-03.png"
+                     alt="French Vintage Residence bedroom 3">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/french-vintage-residence-study.png"
+                     alt="French Vintage Residence study">
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- Lightbox -->
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+
+        <button
+
+            class="lightbox-close"
+
+            type="button"
+
+            aria-label="Close image viewer">
+
+            &times;
+
+        </button>
+
+        <button
+
+            class="lightbox-prev"
+
+            type="button"
+
+            aria-label="Previous image">
+
+            &#8249;
+
+        </button>
+
+        <div class="lightbox-content">
+
+            <img
+
+                id="lightbox-image"
+
+                src=""
+
+                alt="">
+
+        </div>
+
+        <button
+
+            class="lightbox-next"
+
+            type="button"
+
+            aria-label="Next image">
+
+            &#8250;
+
+        </button>
+
+    </div>
+
+    <!-- Back to Our Work -->
+
+    <section class="project-back">
+
+    <!-- Back to Our Work -->
+
+    <section class="project-back">
+
+        <a href="index.html#work">
+
+            ← Back to Our Work
+
+        </a>
+
+    </section>
+
+    <script>
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("main-nav");
+
+        nav.classList.toggle("active");
+
+    }
+
+    const navLinks = document.querySelectorAll("#main-nav a");
+
+    navLinks.forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            const nav = document.getElementById("main-nav");
+
+            nav.classList.remove("active");
+
+        });
+
+    });
+
+    /* Lightbox */
+
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+
+    const lightbox = document.getElementById("lightbox");
+
+    const lightboxImage = document.getElementById("lightbox-image");
+
+    const lightboxClose = document.querySelector(".lightbox-close");
+
+    const lightboxPrev = document.querySelector(".lightbox-prev");
+
+    const lightboxNext = document.querySelector(".lightbox-next");
+
+    let currentImageIndex = 0;
+
+    function openLightbox(index) {
+
+        currentImageIndex = index;
+
+        lightboxImage.src = galleryImages[currentImageIndex].src;
+
+        lightboxImage.alt = galleryImages[currentImageIndex].alt;
+
+        lightbox.classList.add("active");
+
+        lightbox.setAttribute("aria-hidden", "false");
+
+        document.body.classList.add("lightbox-open");
+
+    }
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("active");
+
+        lightbox.setAttribute("aria-hidden", "true");
+
+        document.body.classList.remove("lightbox-open");
+
+    }
+
+    function showPreviousImage() {
+
+        currentImageIndex--;
+
+        if (currentImageIndex < 0) {
+
+            currentImageIndex = galleryImages.length - 1;
+
+        }
+
+        lightboxImage.src = galleryImages[currentImageIndex].src;
+
+        lightboxImage.alt = galleryImages[currentImageIndex].alt;
+
+    }
+
+    function showNextImage() {
+
+        currentImageIndex++;
+
+        if (currentImageIndex >= galleryImages.length) {
+
+            currentImageIndex = 0;
+
+        }
+
+        lightboxImage.src = galleryImages[currentImageIndex].src;
+
+        lightboxImage.alt = galleryImages[currentImageIndex].alt;
+
+    }
+
+    galleryImages.forEach(function(image, index) {
+
+        image.addEventListener("click", function() {
+
+            openLightbox(index);
+
+        });
+
+    });
+
+    lightboxClose.addEventListener("click", function() {
+
+        closeLightbox();
+
+    });
+
+    lightboxPrev.addEventListener("click", function() {
+
+        showPreviousImage();
+
+    });
+
+    lightboxNext.addEventListener("click", function() {
+
+        showNextImage();
+
+    });
+
+    lightbox.addEventListener("click", function(event) {
+
+        if (event.target === lightbox) {
+
+            closeLightbox();
+
+        }
+
+    });
+
+    document.addEventListener("keydown", function(event) {
+
+        if (!lightbox.classList.contains("active")) {
+
+            return;
+
+        }
+
+        if (event.key === "Escape") {
+
+            closeLightbox();
+
+        }
+
+        if (event.key === "ArrowLeft") {
+
+            showPreviousImage();
+
+        }
+
+        if (event.key === "ArrowRight") {
+
+            showNextImage();
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>
